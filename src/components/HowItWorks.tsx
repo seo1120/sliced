@@ -1,54 +1,61 @@
 const steps = [
   {
-    number: "1",
-    title: "프로젝트를 등록하세요",
+    number: "01",
+    title: "Share your world",
     description:
-      "이름과 목표만 입력하면 Sliced가 자동으로 프로젝트 구조를 분석합니다.",
+      "Send us your character profiles, background art, and story. We'll transform it into a Minecraft server.",
   },
   {
-    number: "2",
-    title: "AI가 태스크를 나눕니다",
+    number: "02",
+    title: "Open to fans",
     description:
-      "최적의 단위로 분할하고, 우선순위와 의존관계를 자동으로 매핑합니다.",
+      "Share the server link with your community. Fans join and explore your universe firsthand.",
   },
   {
-    number: "3",
-    title: "팀이 함께 움직입니다",
+    number: "03",
+    title: "Earn revenue",
     description:
-      "각 팀원에게 적합한 태스크를 배정하고, 실시간으로 진행 상황을 추적합니다.",
+      "Access passes, in-game items, special events generate income. Revenue is shared with you.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-foreground py-20 text-white md:py-32">
-      <div className="mx-auto max-w-[980px] px-6 lg:px-0">
+    <section id="how-it-works" className="border-t border-border/40 py-20 md:py-28">
+      <div className="mx-auto max-w-[1080px] px-6">
         <div className="text-center">
-          <h2 className="text-[32px] font-semibold tracking-tight md:text-[48px]">
-            시작은 간단합니다.
+          <h2 className="text-[28px] font-bold tracking-tight text-foreground md:text-[40px]">
+            Three steps. That&apos;s it.
           </h2>
-          <p className="mt-3 text-lg text-white/50 md:text-[21px]">
-            세 단계면 충분합니다.
-          </p>
         </div>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-3 md:mt-20">
-          {steps.map((step) => (
-            <div
-              key={step.number}
-              className="bg-foreground p-10 md:p-12"
-            >
-              <span className="text-[56px] font-semibold leading-none tracking-tight text-accent">
-                {step.number}
-              </span>
-              <h3 className="mt-5 text-[19px] font-semibold tracking-tight">
-                {step.title}
-              </h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-white/50">
-                {step.description}
-              </p>
-            </div>
-          ))}
+        <div className="mx-auto mt-14 max-w-[800px] md:mt-16">
+          <div className="space-y-0">
+            {steps.map((step, i) => (
+              <div
+                key={step.number}
+                className="group relative flex gap-6 py-8 md:gap-10 md:py-10"
+              >
+                {/* vertical line */}
+                {i < steps.length - 1 && (
+                  <div className="absolute top-16 left-[23px] h-[calc(100%-32px)] w-px bg-gradient-to-b from-accent/40 to-border/20 md:left-[31px]" />
+                )}
+
+                <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-[14px] font-bold text-accent md:h-16 md:w-16 md:text-[16px]">
+                  {step.number}
+                </div>
+
+                <div className="pt-1 md:pt-3">
+                  <h3 className="text-[18px] font-semibold tracking-tight text-foreground md:text-[20px]">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-muted">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
