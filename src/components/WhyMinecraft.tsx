@@ -6,7 +6,7 @@ const stats = [
 
 export default function WhyMinecraft() {
   return (
-    <section className="border-t border-border/40 bg-surface py-20 md:py-28">
+    <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-[860px] px-6 text-center">
         <h2 className="text-[28px] font-bold leading-tight tracking-tight text-foreground md:text-[40px]">
           Not a new app.
@@ -20,9 +20,9 @@ export default function WhyMinecraft() {
           The mod ecosystem is officially supported with zero restrictions.
         </p>
 
-        <div className="mx-auto mt-12 grid max-w-[600px] grid-cols-3 gap-4 md:mt-14">
+        <div className="pixel-grid mx-auto mt-12 grid max-w-[600px] grid-cols-3 gap-4 md:mt-14">
           {stats.map((stat) => (
-            <div key={stat.label} className="rounded-xl border border-border bg-background p-5 md:p-6">
+            <div key={stat.label} className="rounded-xl border border-border bg-surface p-5 md:p-6">
               <div className="text-[28px] font-bold tracking-tight text-accent md:text-[36px]">
                 {stat.value}
               </div>
