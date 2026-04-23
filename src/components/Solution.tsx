@@ -1,9 +1,13 @@
+"use client";
+
+import Reveal from "./Reveal";
+
 const cards = [
   {
     number: "01",
     title: "World Building",
     description:
-      "Your backgrounds, buildings, and landmarks — recreated in Minecraft. AI generates worlds from your original artwork.",
+      "Your backgrounds, buildings, and landmarks — recreated as an immersive 3D world. AI generates it from your original artwork.",
   },
   {
     number: "02",
@@ -15,7 +19,7 @@ const cards = [
     number: "03",
     title: "Fans Spend",
     description:
-      "Server access, limited items, special quests. Fan experience becomes revenue. You earn from what fans love.",
+      "World access, limited items, special quests. Fan experience becomes revenue. You earn from what fans love.",
   },
 ];
 
@@ -24,30 +28,33 @@ export default function Solution() {
     <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-[1080px] px-6">
         <div className="text-center">
-          <h2 className="text-[28px] font-bold leading-tight tracking-tight text-foreground md:text-[40px]">
-            Your universe becomes a server.
-          </h2>
-          <p className="mt-3 text-[16px] text-muted md:text-[18px]">
-            We turn your IP into an experience fans can walk into.
-          </p>
+          <Reveal>
+            <h2 className="text-[28px] font-bold leading-tight tracking-tight text-foreground md:text-[40px]">
+              Your universe becomes a world.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-3 text-[16px] text-muted md:text-[18px]">
+              We turn your IP into an experience fans can walk into.
+            </p>
+          </Reveal>
         </div>
 
         <div className="mt-14 grid gap-4 md:mt-16 md:grid-cols-3">
-          {cards.map((card) => (
-            <div
-              key={card.number}
-              className="group rounded-2xl border border-border bg-surface p-8 transition-all duration-300 hover:border-accent/30 hover:bg-surface-light md:p-10"
-            >
-              <span className="font-display text-[40px] leading-none text-accent md:text-[48px]">
-                {card.number}
-              </span>
-              <h3 className="mt-5 text-[18px] font-semibold tracking-tight text-foreground">
-                {card.title}
-              </h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-muted">
-                {card.description}
-              </p>
-            </div>
+          {cards.map((card, i) => (
+            <Reveal key={card.number} delay={i * 0.12} direction="up">
+              <div className="group h-full rounded-2xl border border-border bg-surface p-8 transition-all duration-300 hover:border-accent/30 hover:bg-surface-light md:p-10">
+                <span className="font-display text-[40px] leading-none text-accent md:text-[48px]">
+                  {card.number}
+                </span>
+                <h3 className="mt-5 text-[18px] font-semibold tracking-tight text-foreground">
+                  {card.title}
+                </h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-muted">
+                  {card.description}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

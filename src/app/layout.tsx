@@ -19,7 +19,7 @@ const pixelifySans = Pixelify_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Sliced — Turn Your IP Into a World Fans Can Enter",
+  title: "SLICED",
   description:
     "Bring your manga, anime, and comic worlds to life in Minecraft. Fans explore, interact with your characters, and spend — you earn. Creator IP monetization, reimagined.",
   keywords: [

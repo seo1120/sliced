@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
+import Demo from "@/components/Demo";
 import HowItWorks from "@/components/HowItWorks";
 import WhyMinecraft from "@/components/WhyMinecraft";
 import TargetCreators from "@/components/TargetCreators";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <Solution />
+        <Demo />
         <HowItWorks />
         <WhyMinecraft />
         <TargetCreators />

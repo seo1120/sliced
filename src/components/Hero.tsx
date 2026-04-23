@@ -25,10 +25,8 @@ export default function Hero() {
               fans can enter.
             </h1>
 
-            <p className="animate-fade-in-d1 mt-4 max-w-[480px] text-[14px] leading-relaxed text-white/70 sm:text-[15px] md:mt-5 md:text-[17px]">
-              Turn your manga & anime universe into a Minecraft server.
-              <br className="hidden sm:block" />
-              Fans talk to your characters, explore your world, and spend.
+            <p className="animate-fade-in-d1 mt-4 max-w-[580px] text-[14px] leading-relaxed text-white/70 sm:text-[15px] md:mt-5 md:text-[17px]">
+              We build immersive 3D worlds from your manga & anime universe. Fans talk to your characters, explore your world, and spend.
             </p>
 
             <div className="animate-fade-in-d2 mt-6 md:mt-8">
